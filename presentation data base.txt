@@ -1,0 +1,17 @@
+ Un système de base de données, SGBD, est un logiciel spécialisé dans la gestion des données de l'entreprise indépendamment des programmes qui les utilisent.
+ Les SGBD isolent physiquement les données de référence des applications qui les utilisent. Plus particulièrement, les SGBD relationnels placent en évidence les relations existantes entre les différentes données de l’entreprise. 
+ Les SGBD relationnels mettent au premier plan les relations entre les données. Celles-ci sont organisées en tables à deux dimensions. On parle alors de ligne et de colonnes.
+ Considérons une table client, voir la figure ci-dessous. Un enregistrement tel que la description des données d'un client spécifique correspond à une ligne. Chaque colonne correspond à un attribut spécifique : le nom, l'adresse, le téléphone...
+ 
+ Ainsi, il est particulièrement aisé pour un programme ou directement pour un utilisateur d'accéder à un client précis ou de trier, ou d'extraire les enregistrements clients selon une caractéristique
+
+
+
+-En général, les bases de données MySQL et PostgreSQL prennent entièrement en charge ACID et peuvent gérer de grandes quantités de données et des niveaux élevés de simultanéité des requêtes.
+
+-PostgreSQL est plus riche en fonctionnalités et extensible et peut-être un meilleur choix pour les cas extrêmes.
+ MySQL est beaucoup plus populaire, convient aux applications Web et aux projets de commerce électronique, il y a beaucoup plus de blogs/support/documentation que pour PostgreSQL.
+ Pour les environnements avec un nombre élevé de connexions - PostgreSQL peut avoir besoin de beaucoup de mémoire, car chaque connexion a sa propre mémoire. Cependant, il existe des solutions pour surmonter ce problème, comme les PgBouncers, des pools de connexion externes.
+ La gestion manuelle des partitions dans PostgreSQL nécessite trop de surcharge et les mises à jour qui déplacent des lignes d'une partition à une autre échoueront.
+ Il existe une limitation de 1 processeur par requête dans MySQL et uniquement l'algorithme de jointure en boucle imbriquée, ce qui fait de MySQL un choix moins optimal pour les systèmes d'entrepôt de données.
+ Si la fonctionnalité de contrainte de vérification est importante, il n'y en a pas dans MySQL.
